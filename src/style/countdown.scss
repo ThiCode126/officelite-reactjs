@@ -1,0 +1,133 @@
+/**
+* * Général
+*/
+
+#countdown {
+  .in-section {
+    h3 {
+      letter-spacing: 5px;
+      margin-bottom: 18px;
+
+      .date {
+        color: $darkBlue;
+      }
+    }
+
+    .time-container {
+      display: grid;
+      gap: 13px;
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 40px;
+
+      .card {
+        border-radius: 4px;
+        padding: 10px 16px;
+      }
+    }
+  }
+}
+/**
+* * Color
+*/
+
+#countdown.home {
+  padding-bottom: 100px;
+  h3 {
+    color: #fff;
+  }
+  .card {
+    background: $grey;
+
+    h4 {
+      color: #fff;
+    }
+
+    span {
+      opacity: 0.5;
+    }
+  }
+}
+
+#countdown.signup {
+  padding-bottom: 64px;
+  h3 {
+    color: $grey;
+  }
+  .card {
+    background: rgba($darkBlue, 0.1);
+
+    h4 {
+      color: $darkBlue;
+    }
+
+    span {
+      color: $grey;
+      opacity: 0.5;
+    }
+  }
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  #countdown {
+    .in-footer {
+      text-align: center;
+      width: 448px;
+      margin: 0 auto;
+      h3 {
+        color: #fff;
+        letter-spacing: 5px;
+        margin-bottom: 18px;
+
+        .date {
+          color: $darkBlue;
+        }
+      }
+
+      .time-container {
+        display: grid;
+        gap: 13px;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 40px;
+
+        .card {
+          background: $grey;
+          border-radius: 13px;
+          padding: 16px;
+          color: #fff;
+
+          span {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #countdown {
+    .in-section {
+      width: 100%;
+      margin: 0;
+
+      h3 {
+        text-align: left;
+      }
+
+      .time-wrap {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .time-container {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

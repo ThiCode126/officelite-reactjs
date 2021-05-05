@@ -1,0 +1,63 @@
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 171px;
+  height: 56px;
+  border-radius: 28px;
+  margin: 0 auto !important;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+button.first-style {
+  background: $darkBlue;
+  color: white;
+}
+
+button.second-style {
+  background: rgba($darkBlue, 0.15);
+  color: $darkBlue;
+}
+
+button.third-style {
+  background: #fff;
+  color: $darkBlue;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  #started,
+  #price {
+    button {
+      margin: 0 !important;
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #price {
+    button {
+      margin: 0 auto !important;
+    }
+  }
+  footer {
+    button {
+      margin: 0 !important;
+    }
+  }
+}

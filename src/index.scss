@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+$darkBlue: #5175ff;
+$lightBlue: #829cff;
+$grey: #333950;
+$darkGrey: #25293a;
+$lightGrey: #747b95;
+$lightRed: #f05b5b;
+
+@import "./style/body.scss";
+
+@import "./style/header.scss";
+
+@import "./style/button.scss";
+@import "./style/countdown.scss";
+
+@import "./style/home.scss";
+@import "./style/signup.scss";
