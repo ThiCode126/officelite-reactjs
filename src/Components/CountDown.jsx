@@ -29,9 +29,13 @@ const CountDown = ({ page }) => {
               </div>
             </div>
 
-            <Link to="/signup">
-              <button className="first-style">Get Started</button>
-            </Link>
+            {page === "home" ? (
+              <Link to="/signup">
+                <button className="first-style">Get Started</button>
+              </Link>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>

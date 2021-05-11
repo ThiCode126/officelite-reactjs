@@ -98,7 +98,7 @@ const Home = () => {
       </section>
 
       <CountDown page="home" />
-      <div className="footer-back"></div>
+      <div id="footer-home" className="footer-back"></div>
     </>
   );
 };

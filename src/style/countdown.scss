@@ -43,6 +43,7 @@
     }
 
     span {
+      color: #fff;
       opacity: 0.5;
     }
   }
@@ -72,12 +73,11 @@
 */
 @media (min-width: 768px) {
   #countdown {
-    .in-footer {
+    .in-section {
       text-align: center;
       width: 448px;
       margin: 0 auto;
       h3 {
-        color: #fff;
         letter-spacing: 5px;
         margin-bottom: 18px;
 
@@ -93,10 +93,8 @@
         margin-bottom: 40px;
 
         .card {
-          background: $grey;
           border-radius: 13px;
           padding: 16px;
-          color: #fff;
 
           span {
             opacity: 0.5;

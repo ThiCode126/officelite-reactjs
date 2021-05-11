@@ -1,8 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import CountDown from "../Components/CountDown";
 import NavBar from "../Components/NavBar";
 
 const SignUp = () => {
+  const packages = [
+    {
+      id: 0,
+      name: "Basic Pack",
+      price: "Free",
+    },
+    {
+      id: 1,
+      name: "Pro Pack",
+      price: "$9.99",
+    },
+    {
+      id: 2,
+      name: "Ultimate Pack",
+      price: "$19.99",
+    },
+  ];
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    package_id: 0,
+    phone: "",
+    company: "",
+  });
+  const [isSelected, setIsSelected] = useState(false);
+
+  const toggleSelected = () => {
+    setIsSelected(!isSelected);
+  };
+
+  const handleSelect = (id) => {
+    setForm({ ...form, package_id: id });
+    setIsSelected(false);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(e.target);
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    window.alert("Formulaire validé");
+  };
+
   return (
     <>
       <NavBar />
@@ -20,6 +68,100 @@ const SignUp = () => {
       </section>
 
       <CountDown page="signup" />
+
+      <section id="form">
+        <div className="content-wrapper">
+          <div className="in-section">
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Name"
+                className="secondBody"
+              />
+              <input
+                type="text"
+                name="email"
+                id="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+                className="secondBody"
+              />
+              <div
+                id="package"
+                className={`dropdown secondBody ${
+                  isSelected ? "active" : "not-active"
+                }`}
+              >
+                <div className="select" onClick={toggleSelected}>
+                  <span className="boldBody">
+                    {packages[form.package_id].name}
+                    <span className="price">
+                      {packages[form.package_id].price}
+                    </span>
+                  </span>
+                  <img
+                    src="./assets/sign-up/icon-arrow-down.svg"
+                    id="arrow"
+                    alt="icon arrow"
+                  />
+                </div>
+
+                <ul className="dropdown-menu">
+                  {packages.map((pack) => {
+                    return (
+                      <li key={pack.id} onClick={() => handleSelect(pack.id)}>
+                        <span className="boldBody">
+                          {packages[pack.id].name}
+                          <span className="price">
+                            {packages[pack.id].price}
+                          </span>
+                        </span>
+                        {pack.id === form.package_id ? (
+                          <img
+                            src="./assets/sign-up/icon-check.svg"
+                            alt="icon check"
+                          />
+                        ) : (
+                          ""
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                value={form.phone}
+                onChange={handleChange}
+                placeholder="Phone Number"
+                className="secondBody"
+              />
+              <input
+                type="text"
+                name="company"
+                id="company"
+                value={form.company}
+                onChange={handleChange}
+                placeholder="Company"
+                className="secondBody"
+              />
+              <Link to="/">
+                <button className="first-style">Get on the list</button>
+              </Link>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <div id="footer-sign-up" className="footer-back"></div>
     </>
   );
 };

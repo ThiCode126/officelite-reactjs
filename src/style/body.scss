@@ -11,8 +11,11 @@ body {
   text-align: center;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
+  list-style: none;
 }
 
 h1 {
@@ -58,6 +61,12 @@ h4 {
   line-height: 28px;
 }
 
+.boldBody {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+}
+
 .thirdBody {
   font-weight: normal;
   font-size: 16px;
@@ -68,6 +77,14 @@ h4 {
   font-weight: bold;
   font-size: 12px;
   line-height: 28px;
+}
+
+.footer-back {
+  background-color: $darkGrey;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
 }
 
 /**

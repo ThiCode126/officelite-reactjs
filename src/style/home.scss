@@ -60,13 +60,8 @@
   }
 }
 
-.footer-back {
-  background-color: $darkGrey;
-  width: 100vw;
+#footer-home.footer-back {
   height: 1248px;
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
 }
 
 /**
@@ -125,7 +120,7 @@
     }
   }
 
-  .footer-back {
+  #footer-home.footer-back {
     height: 986px;
   }
 }
@@ -189,7 +184,7 @@
     }
   }
 
-  .footer-back {
+  #footer-home.footer-back {
     height: 603px;
   }
 }
