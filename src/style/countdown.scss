@@ -4,6 +4,7 @@
 
 #countdown {
   .in-section {
+    text-align: center;
     h3 {
       letter-spacing: 5px;
       margin-bottom: 18px;
@@ -26,6 +27,7 @@
     }
   }
 }
+
 /**
 * * Color
 */
@@ -125,6 +127,13 @@
 
       .time-container {
         margin-bottom: 0;
+      }
+    }
+
+    &.signup {
+      .in-section {
+        width: 448px;
+        margin: 0;
       }
     }
   }

@@ -8,7 +8,6 @@ body {
 .content-wrapper {
   width: 327px;
   margin: 0 auto;
-  text-align: center;
 }
 
 *,
@@ -93,7 +92,6 @@ h4 {
 @media (min-width: 768px) {
   .content-wrapper {
     width: 688px;
-    text-align: left;
   }
 
   h4 {
@@ -111,7 +109,7 @@ h4 {
 */
 @media (min-width: 1440px) {
   .content-wrapper {
-    width: 1280px;
+    width: 1110px;
   }
   h1.title {
     font-size: 56px;

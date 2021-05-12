@@ -5,7 +5,7 @@ import NavBar from "../Components/NavBar";
 
 const Home = () => {
   return (
-    <>
+    <main id="home-page">
       <NavBar />
 
       <section id="started">
@@ -99,7 +99,7 @@ const Home = () => {
 
       <CountDown page="home" />
       <div id="footer-home" className="footer-back"></div>
-    </>
+    </main>
   );
 };
 

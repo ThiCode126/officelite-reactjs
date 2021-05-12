@@ -52,7 +52,7 @@ const SignUp = () => {
   };
 
   return (
-    <>
+    <main id="signup-page">
       <NavBar />
       <section id="hero">
         <div className="content-wrapper">
@@ -162,7 +162,7 @@ const SignUp = () => {
       </section>
 
       <div id="footer-sign-up" className="footer-back"></div>
-    </>
+    </main>
   );
 };
 
