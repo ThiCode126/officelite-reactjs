@@ -34,7 +34,7 @@
         }
       }
 
-      button {
+      .button {
         width: 100%;
         margin: 40px 0 0 !important;
       }
@@ -141,6 +141,10 @@
         }
       }
     }
+
+    #footer-sign-up.footer-back {
+      height: 380px;
+    }
   }
 }
 
@@ -158,8 +162,7 @@
     grid-template-areas:
       "header header"
       "leftContent1 RightContent"
-      "leftContent2 RightContent"
-      "footer footer";
+      "leftContent2 RightContent";
 
     header {
       grid-area: header;
@@ -221,6 +224,14 @@
           width: 360px;
         }
       }
+    }
+
+    #footer-sign-up.footer-back {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 420px;
     }
   }
 }

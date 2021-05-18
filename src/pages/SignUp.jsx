@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CountDown from "../Components/CountDown";
 import NavBar from "../Components/NavBar";
+import validator from "validator";
 
 const SignUp = () => {
   const packages = [
@@ -30,6 +31,7 @@ const SignUp = () => {
     company: "",
   });
   const [isSelected, setIsSelected] = useState(false);
+  const [isMail, setIsMail] = useState(true);
 
   const toggleSelected = () => {
     setIsSelected(!isSelected);
@@ -42,7 +44,10 @@ const SignUp = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(e.target);
+    if (name === "email") {
+      console.log("mail");
+      setIsMail(validator.isEmail(value));
+    }
     setForm({ ...form, [name]: value });
   };
 
@@ -89,7 +94,7 @@ const SignUp = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Email Address"
-                className="secondBody"
+                className={`secondBody ${isMail ? "" : "error"}`}
               />
               <div
                 id="package"
@@ -154,7 +159,7 @@ const SignUp = () => {
                 className="secondBody"
               />
               <Link to="/">
-                <button className="first-style">Get on the list</button>
+                <div className="button first-style">Get on the list</div>
               </Link>
             </form>
           </div>

@@ -26,7 +26,7 @@ const Home = () => {
                 with an intuitive interface to improve productivity.
               </p>
               <Link to="/signup">
-                <button className="first-style">Get Started</button>
+                <div className="button first-style">Get Started</div>
               </Link>
             </div>
           </div>
@@ -52,7 +52,7 @@ const Home = () => {
                 </div>
               </div>
               <Link to="/signup">
-                <button className="second-style">Try for Free</button>
+                <div className="button second-style">Try for Free</div>
               </Link>
             </div>
             <div className="card-price" id="second">
@@ -71,7 +71,7 @@ const Home = () => {
                 </div>
               </div>
               <Link to="/signup">
-                <button className="third-style">Try for Free</button>
+                <div className="button third-style">Try for Free</div>
               </Link>
             </div>
             <div className="card-price" id="third">
@@ -90,7 +90,7 @@ const Home = () => {
                 </div>
               </div>
               <Link to="/signup">
-                <button className="second-style">Try for Free</button>
+                <div className="button second-style">Try for Free</div>
               </Link>
             </div>
           </div>

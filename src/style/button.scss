@@ -1,4 +1,4 @@
-button {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,17 +13,17 @@ button {
   line-height: 26px;
 }
 
-button.first-style {
+.button.first-style {
   background: $darkBlue;
   color: white;
 }
 
-button.second-style {
+.button.second-style {
   background: rgba($darkBlue, 0.15);
   color: $darkBlue;
 }
 
-button.third-style {
+.button.third-style {
   background: #fff;
   color: $darkBlue;
 }
@@ -40,7 +40,7 @@ a:visited {
 @media (min-width: 768px) {
   #started,
   #price {
-    button {
+    .button {
       margin: 0 !important;
     }
   }
@@ -51,12 +51,12 @@ a:visited {
 */
 @media (min-width: 1440px) {
   #price {
-    button {
+    .button {
       margin: 0 auto !important;
     }
   }
   footer {
-    button {
+    .button {
       margin: 0 !important;
     }
   }
